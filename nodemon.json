@@ -1,0 +1,6 @@
+{
+  "env": {
+    "MONGO_ATLAS_PW": "tanvir786",
+    "JWT_KEY": "nazmultanvir"
+  }
+}
