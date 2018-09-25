@@ -7,23 +7,20 @@ const tracker = require('./routes/tracker');
 const app = express();
 
 // Mongoose
-// const uri =
-// 	'mongodb+srv://AuthAPi:' +
-// 	process.env.MONGO_ATLAS_PW +
-// 	'@cluster0-oyy5a.mongodb.net/test?retryWrites=true';
-// const options = {
-// 	reconnectTries: Number.MAX_VALUE,
-// 	poolSize: 10,
-// 	useNewUrlParser: true,
-// };
-// mongoose
-// 	.connect(uri)
-// 	.then(result => {
-// 		console.log('--------------------done----------------');
-// 	})
-// 	.catch(err => {
-// 		console.log('--------------------error----------------');
-// 	});
+const uri = 'mongodb+srv://AuthAPi:tanvir786@cluster0-oyy5a.mongodb.net/test?retryWrites=true';
+const options = {
+	reconnectTries: Number.MAX_VALUE,
+	poolSize: 10,
+	useNewUrlParser: true,
+};
+mongoose
+	.connect(uri)
+	.then(result => {
+		console.log(result);
+	})
+	.catch(err => {
+		console.log(err);
+	});
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
